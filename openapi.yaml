@@ -1,0 +1,22 @@
+openapi: '3.0.3'
+info:
+  title: Format Example
+  version: 1.0.0
+paths:
+  '/':
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - param
+              properties:
+                param:
+                  type: string
+                  format: integer
+      responses:
+        '200':
+          description: 'OK'
